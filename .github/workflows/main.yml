@@ -7,19 +7,20 @@ on:
 
 jobs:
 
-  permissions:
-    actions: write
-    checks: write
-    contents: write
-    deployments: write
-    issues: write
-    packages: write
-    pull-requests: write
-    repository-projects: write
-    security-events: write
-    statuses: write
-
   build:
+
+    permissions:
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      issues: write
+      packages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
+
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -39,7 +40,6 @@ jobs:
         cd ../../../.procon-gardener
         jq '.atcoder.repository_path|="."' config.json > tmp
         mv tmp config.json
-        #ここを書き換える
         jq '.atcoder.user_id|="carldesu"' config.json > tmp
         mv tmp config.json
         jq '.atcoder.user_email|="skakeru0920@gmail.com"' config.json > tmp
