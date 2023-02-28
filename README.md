@@ -33,7 +33,7 @@ math.ceil(x / 1000) * 1000
 のような形で求められる。
 
 
-### all( iterable )
+### all(iterable)
 iterable の全ての要素が真ならば (もしくは iterable が空ならば) True を返します。以下のコードと等価です:
 
 def all(iterable):
@@ -42,9 +42,10 @@ def all(iterable):
             return False
     return True
 
+all(a % 2 == 0 for a in A)
+配列Aのそれぞれの要素が全て2で割れ切れる場合はtrueを返す
 
 # About JavaScript
-
 
 ### "use strict";
 
