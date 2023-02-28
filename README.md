@@ -45,6 +45,9 @@ def all(iterable):
 all(a % 2 == 0 for a in A)
 配列Aのそれぞれの要素が全て2で割れ切れる場合はtrueを返す
 
+### math.sqrt(num)
+numの平方根を返す
+
 # About JavaScript
 
 ### "use strict";
